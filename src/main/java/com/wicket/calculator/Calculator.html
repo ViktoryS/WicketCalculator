@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head xlmns:wicket>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Wicket Calculator</title>
+</head>
+<style>
+.mainContent {
+	width: 40%;
+	margin: auto;
+}
+
+.mainContent input {
+	margin: 1em 0em 1em 0em;
+	width: 100%;
+	display: inherit;
+}
+
+.numbersPane {
+	width: 100%;
+	height: 10em;
+}
+
+.numbersPane input {
+	margin: 0px;
+	height: 100%;
+}
+</style>
+<h1 align="center">Calculator</h1>
+<body>
+	<div class="mainContent">
+		<form wicket:id="form">
+			<span wicket:id="message"></span> <input type="text"
+				wicket:id="textField" />
+			<table class="numbersPane">
+				<tr>
+					<td><input wicket:id="clean" type="submit" value="C" /></td>
+				</tr>
+				<tr>
+					<td><input wicket:id="0" type="submit" value="0" /></td>
+					<td><input wicket:id="1" type="submit" value="1" /></td>
+					<td><input wicket:id="2" type="submit" value="2" /></td>
+					<td><input wicket:id="+" type="submit" value="+" /></td>
+				</tr>
+				<tr>
+					<td><input wicket:id="3" type="submit" value="3" /></td>
+					<td><input wicket:id="4" type="submit" value="4" /></td>
+					<td><input wicket:id="5" type="submit" value="5" /></td>
+					<td><input wicket:id="-" type="submit" value="-" /></td>
+				</tr>
+				<tr>
+					<td><input wicket:id="6" type="submit" value="6" /></td>
+					<td><input wicket:id="7" type="submit" value="7" /></td>
+					<td><input wicket:id="8" type="submit" value="8" /></td>
+					<td><input wicket:id="*" type="submit" value="*" /></td>
+				</tr>
+				<tr>
+					<td><input wicket:id="9" type="submit" value="9" /></td>
+					<td><input wicket:id="." type="submit" value="." /></td>
+					<td><input wicket:id="/" type="submit" value="/" /></td>
+					<td><input wicket:id="=" type="submit" value="=" /></td>
+				</tr>
+			</table>
+
+			<table class="numbersPane">
+				<tr wicket:id="listview">
+					<td><span wicket:id="result"></span></td>
+					<td><input wicket:id="use" type="submit" value="Use value"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
